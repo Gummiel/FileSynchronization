@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,8 +15,9 @@ namespace FileSynchronization
         public static void MainMenu()
         {
             Console.WriteLine("Main menu:\n" +
-                              "1: Something\n" +
-                              "2: Some other thing");
+                              "1: Backup\n" +
+                              "2: Restore\n" +
+                              "9: Exit");
             Console.WriteLine("Select an option");
 
             _input = Console.ReadLine();
@@ -24,10 +26,13 @@ namespace FileSynchronization
             switch (_input)
             {
                 case "1":
-                    Console.WriteLine("Hurray you pressed 1");
+                    Console.WriteLine("Backup");
                     break;
                 case "2":
-                    Console.WriteLine("Hurray you pressed 2");
+                    Console.WriteLine("Restore");
+                    break;
+                case "9":
+                    Environment.Exit(0);
                     break;
                 default:
                     Console.WriteLine("Not a valid option");
