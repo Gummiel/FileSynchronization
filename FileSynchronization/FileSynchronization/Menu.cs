@@ -14,9 +14,8 @@ namespace FileSynchronization
 
         public static void MainMenu()
         {
-            Console.WriteLine("Main menu:\n" +
-                              "1: Backup\n" +
-                              "2: Restore\n" +
+            Console.WriteLine("Main menu:\n" + 
+                              "1: Synchronize\n" +
                               "9: Exit");
             Console.WriteLine("Select an option");
 
@@ -26,10 +25,8 @@ namespace FileSynchronization
             switch (_input)
             {
                 case "1":
-                    Console.WriteLine("Backup");
-                    break;
-                case "2":
-                    Console.WriteLine("Restore");
+                    //Check if same amount and files at both destination, and if not synchronize everything, Print a list of extra files pulled back
+                    Console.WriteLine("Synchronize");
                     break;
                 case "9":
                     Environment.Exit(0);
